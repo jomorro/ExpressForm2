@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Create User</title>
+</head>
+
+<body>
+    <section>
+        <form id="user-create-form" action="./api/user" method="post">
+            <fieldset>
+                <legend>User Info</legend>
+                <ul>
+
+                <p>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="username" autofocus>
+                </p>
+
+                <p>
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="email address">
+                </p>
+
+                <p>
+                    <label for="pay-rate">Desired Pay Rate </label>
+                    <input type="number" name="pay-rate" id="pay-rate" placeholder="$7.25" step="0.25" />
+                </p>
+
+                <p>
+                    <label for="zip-code">Zip Code</label>
+                    <input type="text" name="zip-code" id="zip-code" placeholder="zip code">
+                </p>
+
+
+                <p>
+                    <label for="mobile-number">Mobile Phone Number</label>
+                    <input type='tel' name='modile-number' id='mobile-number' placeholder="(xxx)xxx-xxxx">
+                </p>
+
+                <p>
+                    <label for='social-profile'>Social Media (Url)</label>
+                    <input type='url' name='social-profile' id='social-profile'>
+                </p>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>What is your preferred communication method?</legend>
+                <ul>
+                <p>
+                    <label for="cell-preferred-radio">Cell Phone</label>
+                    <input type='radio' id='cell-preferred-radio' name='preferred-contact-method-selector' value='cell'>
+                </p>
+
+                <p>
+                    <label for='email-preferred-radio'>Email</label>
+                    <input type='radio' id='email-preferred-radio' name='preferred-contact-method-selector' value='email'>
+                </p>
+                </ul>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>What devices do you use?</legend>
+                <ul>
+                <p>
+                    <label for="ios-checkbox">iOS</label>
+                    <input type='checkbox' id='ios-checkbox' name='user-devices' value='ios'>
+                </p>
+                <p>
+                    <label for="android-checkbox">Android</label>
+                    <input type='checkbox' id='android-checkbox' name='user-devices' value='android'>
+                </p>
+
+                <p>
+                    <label for='mac-checkbox'>Mac</label>
+                    <input type='checkbox' id='mac-checkbox' name='user-devices' value='mac'>
+                </p>
+
+                <p>
+                    <label for='windows-checkbox'>Windows</label>
+                    <input type='checkbox' id='windows-checkbox' name='user-devices' value='windows'>
+                </p>
+
+                <p>
+                    <label for='linux-checkbox'>Linux</label>
+                    <input type='checkbox' id='linux-checkbox' name='user-devices' value='linux'>
+                </p>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Info</legend>
+                <ul>
+                <p>
+                    <label for='user-type'>User Type</label>
+                    <select id="user-type" name="user-type">
+                        <option value="user">User</option>
+                        <option value="moderator">Moderator</option>
+                        <option value='administrator'>Administrator</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="fav-color">Favorite Color</label>
+                    <input type="color" name="fav-color" id="fav-color">
+                </p>
+                </ul>
+            </fieldset>
+
+            <button type="submit">Create User</button>
+            <button type="reset">Reset!</button>
+
+        </form>
+
+        <p id="submission-confirmation"></p>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
